@@ -1,4 +1,4 @@
-Example_Drag
+CRPS Visual Perception Test
 ============
 
 
