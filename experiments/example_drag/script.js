@@ -106,7 +106,8 @@ this.options.events['mousedown'] = (e) => {
     e.preventDefault();
     e.stopPropagation();
     // relative position of the mouse in relation to screen center
-[mouseX, mouseY] = this.transformInverse([e.clientX, e.clientY])
+    [mouseX, mouseY] = this.transformInverse([e.clientX, e.clientY])  
+    console.log(mouseX, mouseY)
     // check whether mouse is on the shape
     distance = Math.round(Math.abs(Math.sqrt(Math.pow((mouseX-relX), 2)+Math.abs(Math.pow((mouseY-relY), 2)))));
     console.log(distance)
@@ -127,8 +128,7 @@ this.options.events['mousemove'] = (e) => {
   e.preventDefault();
   e.stopPropagation();
   // relative position of the mouse in relation to screen center
-  [mouseX, mouseY] = this.transformInverse([e.clientX, e.clientY])
-  
+  [mouseX, mouseY] = this.transformInverse([e.clientX, e.clientY]) 
   
   relX = Math.round(mouseX);
   relY = Math.round(mouseY);  
